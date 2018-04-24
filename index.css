@@ -13,38 +13,38 @@ html,body{
     text-align: center;
 }
 h1{
-    background-color: #4183a1;
+    margin:0;
     padding:16px 0;
     font-weight: normal;
-    margin:0;
     font-size:23px;
     line-height: 1.5;
+    background-color: #4183a1;
 }
 h1 span{
-    font-size:42px;
     display: inline-block;
-    border-radius: 50%;
     width:54px;
     height:54px;
     margin:0 3px;
+    border-radius: 50%;
+    font-size:42px;
     line-height: 54px;
     box-shadow: 0 1px 3px #121212;
 }
 .r{
-    background:rgba(224, 30, 30, 0.7);
+    background:rgb(197, 35, 35);
 }
 .g{
-    background:rgba(22, 196, 51, 0.7);
+    background:rgb(26, 182, 52);
 }
 .b{
-    background:rgba(48, 60, 224, 0.7);
+    background:rgb(45, 55, 199);
 }
 .score-progress{
     display: block;
     padding-top: 20px;
+    border-top: 7px dashed #4183a1;
     font-weight: normal;
     font-size:20px;
-    border-top: 7px dashed #4183a1;
 }
 .boxes{
     position: absolute;
@@ -91,11 +91,11 @@ h1 span{
 }
 .modal:before{
     position: fixed;
+    z-index: -1;
     top:0;
-    lefT:0;
+    left:0;
     right:0;
     bottom:50%;
-    z-index: -1;
     content:'';
 }
 .result{
@@ -104,13 +104,13 @@ h1 span{
 }
 .close{
     display: block;
-    border-radius: 5px;
     margin:40px auto 0;
+    padding:5px 10px;
     border:2px solid #fff;
-    color:#fff;
+    border-radius: 5px;
     font-size:20px;
     background:none;
-    padding:5px 10px;
+    color:#fff;
     cursor: pointer;
 }
 .close:active{
