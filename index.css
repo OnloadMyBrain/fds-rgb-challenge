@@ -1,18 +1,43 @@
 @charset "utf-8";
-body{
+html,body{
     margin:0;
     padding:0;
+    font-family: '맑은 고딕', sans-serif;
+    background:#222;
+    color:#fff;
 }
 header{
-    background:#333;
-    color:#fff;
-    padding:10px 20px;
+    position: fixed;
+    z-index: 1000;
+    top:0;
+    left:0;
+    right:0;
+    text-align: center;
 }
 h1{
-    margin:0 0 10px;
-    line-height: 1.6;
+    background-color: rgb(65, 65, 65);
+    padding:20px 0;
+    font-weight: normal;
+    margin:0;
+    font-size:23px;
+    line-height: 1.2;
+}
+h1 span{
+    font-size:56px;
+}
+.r{
+    color:rgb(201, 34, 34);
+}
+.g{
+    color:rgb(33, 182, 70);
+}
+.b{
+    color:rgb(46, 60, 253);
 }
 strong{
+    display: block;
+    margin-top: 20px;
+    font-weight: normal;
     font-size:20px;
 }
 .color-code,
@@ -20,24 +45,24 @@ strong{
     text-align: center;
 }
 .color-code{
-    margin-top:20px;
-    font-size:20px;
-    font-weight: bold;
+    margin-top:350px;
+    font-size:25px;
 }
 .boxes{
     margin-top:30px;
+    font-size: 0;
 }
 .box-color{
     display: inline-block;
     width:100px;
     height:100px;
-    margin:0 15px;
+    margin:15px;
     border-radius: 100%;
     cursor: pointer;
 }
 .box-color.show{
     position: fixed;    
-    transform: scale(20);
+    transform: scale(40);
     transition: all 1s;
 }
 .good{
@@ -46,10 +71,38 @@ strong{
 .modal{
     display: none;
     position: fixed;
-    top:0;
+    top:50%;
     left:0;
     right:0;
     bottom:0;
+    margin-top:-25px;
+    text-align: center;
+    font-weight: bold;
+    font-size:50px;
+    line-height: 50px;
+}
+.modal:before{
+    position: fixed;
+    top:0;
+    lefT:0;
+    right:0;
+    bottom:50%;
+    z-index: -1;
+    content:'';
+}
+.close{
+    display: block;
+    margin:40px auto;
+    border:1px solid #fff;
+    color:#fff;
+    font-size:30px;
+    background:none;
+    padding:5px 10px;
+    cursor: pointer;
+    transform: all .5s;
+}
+.close:hover,
+.close:focus{
 }
 .modal.on{
     display:block;

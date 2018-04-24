@@ -20,22 +20,35 @@ function newStage(){
 
 boxes.forEach((el, index) => {
     el.addEventListener('click', () =>{
+        el.classList.add('show');
         if(correctAnswer === index){
-            alert('정답!!');
+            //alert('정답!!');
             document.querySelector('.modal.right').classList.add('on');
-            document.querySelectorAll('.box-color')[index].classList.add('show');
+            // document.querySelectorAll('.box-color')[index].classList.add('show');
             score++;
         }else{
-            alert('틀림');
+            //alert('틀림');
+            document.querySelector('.modal.false').classList.add('on');
             score = 0;
         }
         document.querySelector('.score').textContent = score;
-        newStage();
+        
     });
 });
 
 document.querySelector('.modal.right .close').addEventListener('click', () => {
+    boxes.forEach(el => {
+        el.classList.remove('show');
+    });
     document.querySelector('.modal.right').classList.remove('on');
+    newStage();
+});
+document.querySelector('.modal.false .close').addEventListener('click', () => {
+    boxes.forEach(el => {
+        el.classList.remove('show');
+    });
+    document.querySelector('.modal.false').classList.remove('on');
+    newStage();
 });
 
 newStage();
