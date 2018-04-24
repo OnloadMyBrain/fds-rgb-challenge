@@ -17,26 +17,27 @@
             <br>
             GUESSING CHALLENGE
         </h1>
-        <strong>
+        <strong class="score-progress">
             SCORE : <span class="score"></span>
         </strong>
     </header>
-    <div class="color-code">
-    </div>
     <div class="boxes">
-        <div class="box-color color-1"></div>
-        <div class="box-color color-2"></div>
-        <div class="box-color color-3"></div>
+        <strong class="color-code"></strong>
+        <span class="box-color"></span>
+        <span class="box-color"></span>
+        <span class="box-color"></span>
     </div>
+
+    <!-- modal -->
     <div class="modal right">
         정답입니다!
-        <button type="button" class="close">NEXT</button>
+        <button type="button" class="close">NEXT COLOR</button>
     </div>
     <div class="modal false">
         틀렸습니다 :(
-        <button type="button" class="close">NEXT</button>
+        <strong class="result">SCORE : <span class="result-score"></span></strong>
+        <button type="button" class="close">PLAY AGAIN</button>
     </div>
-    
 </div>
 <script src="./index.js"></script>
 </body>
