@@ -1,0 +1,56 @@
+@charset "utf-8";
+body{
+    margin:0;
+    padding:0;
+}
+header{
+    background:#333;
+    color:#fff;
+    padding:10px 20px;
+}
+h1{
+    margin:0 0 10px;
+    line-height: 1.6;
+}
+strong{
+    font-size:20px;
+}
+.color-code,
+.boxes{
+    text-align: center;
+}
+.color-code{
+    margin-top:20px;
+    font-size:20px;
+    font-weight: bold;
+}
+.boxes{
+    margin-top:30px;
+}
+.box-color{
+    display: inline-block;
+    width:100px;
+    height:100px;
+    margin:0 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.box-color.show{
+    position: fixed;    
+    transform: scale(20);
+    transition: all 1s;
+}
+.good{
+    transition: all 1s;
+}
+.modal{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.modal.on{
+    display:block;
+}
